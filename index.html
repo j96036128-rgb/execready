@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Rent-to-own Mercedes EQE for professional chauffeurs. Sourced on demand, from £275 a week. Drive it, earn with it, own it.">
+<link rel="icon" href="logo.png">
+<style>*,*::before,*::after{box-sizing:border-box}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Exec Ready</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600&display=swap">
+<style>
+/* Layout: one long column; dark ink bands with gold hairlines, echoing the logo ring and the cover's road line */
+:root{
+  --bg:#0d1117; --panel:#151b25; --line:#2a3240; --fg:#f2efe8; --muted:#a3abb8; --gold:#c8a96a; --gold-soft:#e4cf9f; --ink-on-gold:#0d1117;
+  --display:'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+  --body:'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  color-scheme:dark;
+}
+@media (prefers-color-scheme: light){ :root:not([data-theme="dark"]){
+  --bg:#f6f4ef; --panel:#ffffff; --line:#dcd6c8; --fg:#141922; --muted:#5b6370; --gold:#9a7a3a; --gold-soft:#7a5f2a; --ink-on-gold:#ffffff; color-scheme:light } }
+:root[data-theme="light"]{
+  --bg:#f6f4ef; --panel:#ffffff; --line:#dcd6c8; --fg:#141922; --muted:#5b6370; --gold:#9a7a3a; --gold-soft:#7a5f2a; --ink-on-gold:#ffffff; color-scheme:light }
+:root[data-theme="dark"]{
+  --bg:#0d1117; --panel:#151b25; --line:#2a3240; --fg:#f2efe8; --muted:#a3abb8; --gold:#c8a96a; --gold-soft:#e4cf9f; --ink-on-gold:#0d1117; color-scheme:dark }
+
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:16px;line-height:1.6}
+.wrap{max-width:1040px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+a{color:var(--gold-soft)}
+a:focus-visible,.btn:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+h1,h2,h3{font-family:var(--display);font-weight:600;text-wrap:balance;margin:0}
+p{margin:0}
+.eyebrow{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:600}
+
+header{border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:18px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--fg)}
+.mark{width:42px;height:42px;border-radius:50%;border:1.5px solid var(--gold);display:grid;place-items:center;font-family:var(--display);font-weight:600;font-size:20px;letter-spacing:-1px}
+.mark span{color:var(--gold)}
+.brand b{font-weight:600;letter-spacing:.16em;font-size:13px}
+.btn{display:inline-block;padding:12px 20px;border-radius:2px;text-decoration:none;font-weight:600;font-size:15px}
+.btn-gold{background:var(--gold);color:var(--ink-on-gold)}
+.btn-line{border:1px solid var(--gold);color:var(--fg)}
+
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding-block:64px 56px}
+.hero h1{font-size:clamp(40px,6.4vw,72px);line-height:1.02}
+.hero h1 em{font-style:normal;color:var(--gold)}
+.hero p.lead{color:var(--muted);font-size:18px;max-width:34ch;margin-top:20px}
+.ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.car{width:100%;height:auto;max-width:100%}
+.car .s{stroke:var(--gold)} .car .s2{stroke:var(--gold-soft)}
+.road{height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);opacity:.6}
+
+section{padding-block:56px}
+section+section{border-top:1px solid var(--line)}
+.head{display:flex;flex-direction:column;gap:8px;margin-bottom:28px}
+.head h2{font-size:clamp(30px,4vw,42px)}
+
+.steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;counter-reset:s}
+.step{border-top:1px solid var(--gold);padding-top:16px;min-width:0}
+.step::before{counter-increment:s;content:counter(s);font-family:var(--display);font-size:34px;color:var(--gold);display:block;line-height:1;margin-bottom:10px}
+.step h3{font-size:22px;margin-bottom:6px}
+.step p{color:var(--muted);font-size:15px}
+
+.terms{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:start}
+table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+td{padding:13px 0;border-bottom:1px solid var(--line);vertical-align:top}
+td:first-child{color:var(--muted);padding-right:16px;width:44%}
+td:last-child{font-weight:500}
+.note{color:var(--muted);font-size:13px;margin-top:12px}
+.spec{background:var(--panel);border:1px solid var(--line);padding:24px;display:flex;flex-direction:column;gap:12px}
+.spec h3{font-size:26px}
+.spec ul{margin:0;padding-left:18px;color:var(--muted);display:flex;flex-direction:column;gap:6px}
+
+.fit{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.fit div{min-width:0}
+.fit h3{font-size:20px;margin-bottom:6px}
+.fit p{color:var(--muted);font-size:15px}
+
+details{border-bottom:1px solid var(--line);padding-block:16px}
+summary{cursor:pointer;font-weight:600;list-style:none;display:flex;justify-content:space-between;gap:12px}
+summary::after{content:"+";color:var(--gold);font-size:20px;line-height:1}
+details[open] summary::after{content:"–"}
+details p{color:var(--muted);margin-top:10px;max-width:65ch}
+
+.enq{display:grid;grid-template-columns:1.4fr .8fr;gap:32px;align-items:start}
+form{display:flex;flex-direction:column;gap:14px;min-width:0}
+form label{display:flex;flex-direction:column;gap:6px;font-size:14px;color:var(--muted);min-width:0}
+form input,form select,form textarea{font:inherit;font-size:15px;color:var(--fg);background:var(--panel);border:1px solid var(--line);border-radius:2px;padding:11px 12px;width:100%;box-sizing:border-box}
+form input:focus-visible,form select:focus-visible,form textarea:focus-visible{outline:2px solid var(--gold);outline-offset:1px}
+form .check{flex-direction:row;align-items:flex-start;gap:10px;color:var(--fg)}
+form .check input{width:auto;margin-top:3px}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+form button{align-self:flex-start;border:0;cursor:pointer}
+#enq-status.ok{color:var(--gold-soft)}
+@media (max-width:820px){.enq,.row2{grid-template-columns:1fr}}
+.contact{text-align:left}
+.contact .box{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:20px;border:1px solid var(--gold);padding:28px}
+.contact h2{font-size:clamp(28px,3.6vw,38px)}
+footer{border-top:1px solid var(--line)}
+footer .wrap{padding-block:24px;color:var(--muted);font-size:13px;display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between}
+
+@media (max-width:820px){
+  .hero .wrap,.terms{grid-template-columns:1fr}
+  .steps{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .fit{grid-template-columns:1fr}
+}
+@media (max-width:460px){ .steps{grid-template-columns:1fr} header .btn{padding:10px 14px} }
+</style>
+</head>
+<body>
+
+<header><div class="wrap">
+  <a class="brand" href="#top"><span class="mark">E<span>R</span></span><b>EXEC READY</b></a>
+  <a class="btn btn-line" href="#enquire">Enquire</a>
+</div></header>
+
+<main id="top">
+<div class="hero"><div class="wrap">
+  <div>
+    <p class="eyebrow">Rent-to-own for professional chauffeurs</p>
+    <h1>Drive it. Earn with it. <em>Own it.</em></h1>
+    <p class="lead">A 2023–24 Mercedes EQE, sourced to your spec and paid for weekly from the work it does. After four years it's yours.</p>
+    <div class="ctas">
+      <a class="btn btn-gold" href="#enquire">Start an enquiry</a>
+      <a class="btn btn-line" href="#how">How it works</a>
+    </div>
+  </div>
+  <svg class="car" viewBox="0 0 640 200" fill="none" role="img" aria-label="Outline of an executive saloon">
+    <path class="s" d="M18 150 C 30 128, 70 118, 128 112 C 170 80, 230 52, 318 48 C 400 46, 452 70, 500 104 C 560 110, 602 120, 618 140 C 624 150, 620 158, 606 160 L 560 160 M 470 160 L 210 160 M 118 160 L 34 160 C 22 160, 14 156, 18 150 Z" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+    <path class="s2" d="M168 110 C 205 78, 250 64, 318 62 C 380 62, 420 78, 456 104 Z" stroke-width="2" stroke-linejoin="round" opacity=".8"/>
+    <line class="s2" x1="318" y1="62" x2="318" y2="106" stroke-width="1.5" opacity=".6"/>
+    <circle class="s" cx="164" cy="160" r="34" stroke-width="3"/><circle class="s2" cx="164" cy="160" r="16" stroke-width="1.5" opacity=".6"/>
+    <circle class="s" cx="515" cy="160" r="34" stroke-width="3"/><circle class="s2" cx="515" cy="160" r="16" stroke-width="1.5" opacity=".6"/>
+  </svg>
+</div><div class="road"></div></div>
+
+<section id="how"><div class="wrap">
+  <div class="head"><p class="eyebrow">How it works</p><h2>From your spec to your keys</h2></div>
+  <div class="steps">
+    <div class="step"><h3>Tell us the spec</h3><p>Colour, trim and the platforms you drive for. Black and Exclusive Luxury are the usual choice for exec work.</p></div>
+    <div class="step"><h3>We source and check</h3><p>We find the car and check it before you commit: HPI, full service history, battery health report and first-registration date.</p></div>
+    <div class="step"><h3>You drive and earn</h3><p>A fixed weekly payment over four years. You insure and maintain the car, and you keep everything you earn.</p></div>
+    <div class="step"><h3>It's yours</h3><p>Make the final payment and ownership passes to you. Upgrade to a newer car with us when you're ready.</p></div>
+  </div>
+</div></section>
+
+<section id="terms"><div class="wrap">
+  <div class="head"><p class="eyebrow">The deal</p><h2>Clear terms, set per car</h2></div>
+  <div class="terms">
+    <div>
+      <table>
+        <tr><td>Term</td><td>4 years (208 weeks)</td></tr>
+        <tr><td>Weekly payment</td><td>From £275</td></tr>
+        <tr><td>Deposit</td><td>£1,000 upfront, building to £2,000 over the first 10 weeks</td></tr>
+        <tr><td>Insurance and servicing</td><td>Arranged and paid by you</td></tr>
+        <tr><td>At the end</td><td>The car is yours</td></tr>
+      </table>
+      <p class="note">Indicative figures. The exact payment and deposit depend on the car you choose and are confirmed in writing before you sign.</p>
+    </div>
+    <div class="spec">
+      <p class="eyebrow">The car</p>
+      <h3>Mercedes-Benz EQE 300</h3>
+      <ul>
+        <li>2023–24 registration, under 40,000 miles when sourced</li>
+        <li>89 kWh battery, fully electric and ULEZ-free</li>
+        <li>AMG Line Premium or Exclusive Luxury trim</li>
+        <li>Sourced on demand. We don't hold stock; we find the right car for you</li>
+      </ul>
+    </div>
+  </div>
+</div></section>
+
+<section id="who"><div class="wrap">
+  <div class="head"><p class="eyebrow">Who it's for</p><h2>Built for working chauffeurs</h2></div>
+  <div class="fit">
+    <div><h3>Licensed</h3><p>A current TfL private hire driver's licence and a clean driving record.</p></div>
+    <div><h3>Working exec</h3><p>An active account with an executive or chauffeur platform, or regular work through an operator.</p></div>
+    <div><h3>Trading as a company</h3><p>We currently work with drivers who trade through their own limited company.</p></div>
+  </div>
+</div></section>
+
+<!-- Hidden until Lender Ready has AML supervision. Remove the hidden attribute to show it. -->
+<section id="support" hidden><div class="wrap">
+  <div class="head"><p class="eyebrow">Beyond the car</p><h2>Support for the business behind the wheel</h2></div>
+  <div class="terms">
+    <p style="color:var(--muted);max-width:52ch">Running your own limited company means accounts, tax returns and deadlines. Our partner Lender Ready looks after that side for Exec Ready drivers who want help, so you can focus on driving.</p>
+    <div class="spec">
+      <p class="eyebrow">Through Lender Ready</p>
+      <ul>
+        <li>Setting up your limited company</li>
+        <li>Bookkeeping and year-end accounts</li>
+        <li>Corporation tax and your self assessment</li>
+        <li>Planning your salary and dividends</li>
+      </ul>
+      <p class="note" style="margin-top:4px">Optional and priced separately. Using Lender Ready is never a condition of your car agreement.</p>
+    </div>
+  </div>
+</div></section>
+
+<section id="faq"><div class="wrap">
+  <div class="head"><p class="eyebrow">Questions</p><h2>Before you enquire</h2></div>
+  <details><summary>Do you have cars in stock?</summary><p>No. Every car is sourced to order, so you get the colour, trim and mileage you want rather than whatever is on the forecourt. Sourcing usually takes one to three weeks once your deposit is agreed.</p></details>
+  <details><summary>Is insurance included?</summary><p>No. You arrange hire-and-reward insurance in your own name, which keeps your no-claims history with you. We need to see the policy before handover.</p></details>
+  <details><summary>What happens if I need to stop early?</summary><p>The agreement sets out a hand-back process and any charges in plain terms. We go through it with you before you sign.</p></details>
+  <details><summary>Can I choose the colour?</summary><p>Yes. Black is the most requested for executive work, and we'll search for it first if that's what you want.</p></details>
+</div></section>
+
+<section id="enquire"><div class="wrap">
+  <div class="head"><p class="eyebrow">Enquire</p><h2>Tell us what you drive for</h2></div>
+  <div class="enq">
+    <form id="enq-form" novalidate>
+      <div class="row2">
+        <label for="f-name">Full name<input id="f-name" name="name" autocomplete="name" required></label>
+        <label for="f-phone">Mobile<input id="f-phone" name="phone" type="tel" autocomplete="tel" required></label>
+      </div>
+      <label for="f-email">Email<input id="f-email" name="email" type="email" autocomplete="email" required></label>
+      <div class="row2">
+        <label for="f-platform">Platform or operator<input id="f-platform" name="platform" placeholder="e.g. Uber Exec, Blacklane, an operator" required></label>
+        <label for="f-years">Years holding a TfL licence<select id="f-years" name="years" required><option value="">Choose</option><option>Under 1</option><option>1 to 2</option><option>3 to 5</option><option>Over 5</option></select></label>
+      </div>
+      <div class="row2">
+        <label for="f-ltd">Do you trade through a limited company?<select id="f-ltd" name="ltd" required><option value="">Choose</option><option>Yes</option><option>No, but I'd like to</option><option>No</option></select></label>
+        <label for="f-colour">Preferred colour and trim<select id="f-colour" name="spec"><option>Black, Exclusive Luxury</option><option>Black, AMG Line</option><option>Any colour, best value</option><option>Other (tell us below)</option></select></label>
+      </div>
+      <label class="check" for="f-deposit"><input id="f-deposit" name="deposit" type="checkbox"> I can pay a £1,000 deposit upfront</label>
+      <label for="f-msg">Anything else<textarea id="f-msg" name="message" rows="3"></textarea></label>
+      <label class="check" for="f-consent"><input id="f-consent" name="consent" type="checkbox" required> I agree to Exec Ready contacting me about this enquiry and keeping my details for that purpose</label>
+      <button class="btn btn-gold" type="submit">Send enquiry</button>
+      <p id="enq-status" class="note" role="status"></p>
+    </form>
+    <aside class="spec">
+      <p class="eyebrow">Prefer to message?</p>
+      <h3>WhatsApp us</h3>
+      <p style="color:var(--muted)">Send your name, platform and the spec you want, and we'll reply the same day.</p>
+      <a id="wa-link" class="btn btn-line" href="https://wa.me/447986993592" target="_blank" rel="noopener">Open WhatsApp</a>
+      <p class="note">WhatsApp: <span id="wa-num">07986 993592</span></p>
+    </aside>
+  </div>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+  <span>Exec Ready is a trading name of Jon Adam Consultancy Ltd, registered in England and Wales.</span>
+  <span>Mercedes-Benz and EQE are trademarks of Mercedes-Benz Group AG. Exec Ready is independent and not affiliated with Mercedes-Benz or any ride-hailing platform.</span>
+</div></footer>
+
+<script>
+// Set FORM_ENDPOINT to the form service URL (e.g. Formspree) when the site goes live on execready.co.uk.
+const FORM_ENDPOINT = '';
+const form = document.getElementById('enq-form');
+const statusEl = document.getElementById('enq-status');
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  statusEl.className = 'note';
+  if (!form.checkValidity()) {
+    const bad = form.querySelector(':invalid');
+    statusEl.textContent = 'Please fill in ' + (bad.closest('label')?.childNodes[0]?.textContent.trim() || 'the required fields') + '.';
+    bad.focus();
+    return;
+  }
+  if (!FORM_ENDPOINT) {
+    statusEl.textContent = 'Enquiries open when the site goes live. For now, message us on WhatsApp.';
+    return;
+  }
+  try {
+    const res = await fetch(FORM_ENDPOINT, { method: 'POST', headers: { Accept: 'application/json' }, body: new FormData(form) });
+    if (!res.ok) throw new Error();
+    form.reset();
+    statusEl.className = 'note ok';
+    statusEl.textContent = 'Thanks. We’ll be in touch within one working day.';
+  } catch {
+    statusEl.textContent = 'That didn’t send. Please try again or message us on WhatsApp.';
+  }
+});
+</script>
+
+</body>
+</html>
